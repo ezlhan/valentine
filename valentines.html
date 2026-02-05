@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Valentine's Day</title>
+        <link rel="stylesheet" href="styles.css" type="text/css">
+    </head>
+
+<body>
+    <h1> Will You Be My Favorite Flower, Daisy?</h1>
+    <img src="image/catflower.jpg" alt="A cat dressed as a flower" allign="middle" width="300" height="300">
+
+<div class="button">
+    <a href="yes.html" id="yesBtn"> Yes </a>
+    <button id="noBtn"> No </button>
+</div>
+
+
+<script>
+    const yesBtn = document.getElementById('yesBtn');
+    const noBtn = document.getElementById('noBtn');
+    let currentSize = 1; // Starting scale
+
+    noBtn.addEventListener('click', () => {
+        currentSize += 0.5; // Increase size by 50% each click
+        yesBtn.style.transform = `scale(${currentSize})`;
+        yesBtn.style.display = 'inline-block'; // Ensures transform works
+    });
+</script>
+</body>
+
+
+    </html>
+

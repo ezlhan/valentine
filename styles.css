@@ -1,0 +1,76 @@
+h1{
+    color: #FFD8E5;
+    text-align: center;
+}
+h2{
+    color: #FFD8E5;
+    text-align: center;
+    font-size: 3rem;
+}
+
+body {
+    background-color:  #F898B8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; 
+    margin: 0;
+    text-align: center;
+}
+
+img {
+    max-width: 300px; 
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.button {
+    display: flex;
+    gap: 20px; 
+    align-items: center;
+}
+.button a, .button button {
+    background-color: #FFD8E5;
+    color: #EA3D77;           
+    padding: 15px 30px;
+    text-decoration: none;    
+    font-weight: bold;
+    border-radius: 50px;     
+    border: none;
+    transition: transform 0.2s; 
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.button a:hover {
+    background-color: #ffffff;
+}
+
+#noBtn {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+option {
+    display: flex;
+    gap: 20px; 
+    align-items: center;
+}
+
+.memory-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 200px); /* Two columns, each 200px wide */
+    grid-template-rows: repeat(2, 200px);    /* Two rows, each 200px tall */
+    gap: 15px;                               /* Space between the images */
+    justify-content: center;                 /* Centers the grid horizontally */
+    margin: 20px 0;
+}
+
+.memory-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;    /* This is key: it crops the photo to fit the square */
+    border-radius: 10px;  /* Optional: rounds the corners */
+    border: 4px solid #FFD8E5;
+}

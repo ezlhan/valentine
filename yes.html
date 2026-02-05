@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Valentine's Day</title>
+        <link rel="stylesheet" href="styles.css" type="text/css">
+    </head>
+
+<body>
+
+    <h2>YAY</h2>
+    <img src="image/happycat.jpg" alt="Happy cat" width="300" height="300">
+    
+    <div class="button">
+        <a href="memory.html" id="memorybtn"> View Memory </a>
+        <a href="letter.html" id="letterbtn"> View Letter </a>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+<script>
+  window.onload = function() {
+    var duration = 100000 * 1000; // 5 seconds
+    var animationEnd = Date.now() + duration;
+    var defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
+
+    function randomInRange(min, max) {
+      return Math.random() * (max - min) + min;
+    }
+
+    var interval = setInterval(function() {
+      var timeLeft = animationEnd - Date.now();
+
+      if (timeLeft <= 0) {
+        return clearInterval(interval);
+      }
+
+      var particleCount = 50 * (timeLeft / duration);
+      
+      // Cannon from the left
+      confetti(Object.assign({}, defaults, { 
+        particleCount, 
+        origin: { x: 0, y: 0.6 } 
+      }));
+      
+      // Cannon from the right
+      confetti(Object.assign({}, defaults, { 
+        particleCount, 
+        origin: { x: 1, y: 0.6 } 
+      }));
+    }, 250);
+  };
+</script>
+</body>
+
